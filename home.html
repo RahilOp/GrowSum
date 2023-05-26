@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Finance Company</title>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    body {
+      font-family: Arial, Helvetica, sans-serif
+    }
+    
+    a{
+      text-decoration: none;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    
+    .logo img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    header {
+      background-color: #ffffff;
+      color: #000;
+      padding: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    
+    nav ul li a {
+      color: #000;
+      text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+      background-color: #d9d4d4;
+      color:#000;
+      border: none;
+      padding: 0;
+    }
+
+    .container {
+      margin-left: 0px auto;
+      max-width: 1920px;    
+    }
+    
+    .contact-info {
+      margin-top: 20px;
+    }
+    
+    .contact-info p {
+      margin: 10px 0;
+    }
+    
+    .google-form {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .google-form iframe {
+      max-width: 100%;
+      height: 500px;
+    }
+    
+  
+  .image-text-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  font-size: 30px;
+  background-color: #6397d9;
+  color: whitesmoke;
+}
+ 
+.image-text-section h3{
+  font-size: 50px;
+}
+
+.image-box0 {
+  flex: 0 0 50%; /* Set the width to half of the section */
+  background-color: #6397d9;
+  text-align: center;
+}
+
+.image-box0 img {
+  max-width: 75%;
+  height: auto;
+}
+
+.image-box0:hover{
+  transform:translateY(-5px);
+}
+
+.text-box {
+  flex: 0 0 50%; /* Set the width to half of the section */
+}
+
+.text-box h3 {
+  margin-top: 0;
+}
+
+.text-box p {
+  margin-bottom: 0;
+}
+    
+
+    .section {
+      margin-bottom: 20px;
+      align-items: center;
+      justify-content: center;
+      background-color: #000139;
+    }
+    
+    .section h2 {
+      margin: 0;
+      font-size: 50px;
+    }
+    
+    .section1 {
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+      height: 500px;
+      background-color: #000139;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section2 {
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+      height: 500px;
+      background-color: #9f9f9f;
+      color: grey;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section2.image-boxes.image-box p{
+      color: grey;
+    }
+
+    .section-transaction {
+      margin-bottom: 20px;
+      align-items: center;
+      justify-content: center;
+      background-color: #7ea4d6;
+      color:whitesmoke
+    }
+
+    .section-transaction h2 {
+      margin: 0;
+      font-size: 50px;
+    }
+
+    .section-gform {
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+      height: 500px;
+      background-color: #feffcf;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-gform h2{
+      font-size: 50px;
+    }
+    
+    .image-boxes {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .image-box {
+      width: 30%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    
+    .image-box:hover {
+      transform: translateY(-5px);
+    }
+    
+    .image-box img {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-box p{
+      padding: none;
+      background: none;
+      color: rgb(255, 255, 255);
+    }
+
+    footer {
+      background-color: #ffffff;
+      color: #000;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    footer p {
+      margin: 0;
+    }
+
+    .register-button {
+      background-color: #d9d4d4;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .register-button:hover {
+      background-color: #000;
+      color:#d9d4d4;
+    }
+
+    .logo-search {
+  display: flex;
+  align-items: center;
+} 
+
+.search-bar {
+  margin-left: 0px;
+}
+
+.search-bar input[type="text"] {
+  width: 200px;
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  background-color: #cec9c9;
+  outline: none;
+}
+
+.search-bar button[type="submit"] {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  color: #cec9c9;
+}
+
+.search-bar button[type="submit"]:hover {
+  color: #f39c12;
+}
+
+      
+.download-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px; /* Add margin-bottom for spacing */
+  height: 500px;
+  background-color: #f9f9f9;
+}
+
+.image-container {
+  flex: 0 0 50%; /* Set the width to half of the section */
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.image-container:hover {
+  transform: translateY(-5px);
+}
+
+.image-container img {
+  max-width: 75%;
+  height: 400px;
+}
+
+.content-container {
+  flex: 0 0 50%; /* Set the width to half of the section */
+}
+
+.content-container h3 {
+  margin-top: 0;
+  font-size: 50px;
+}
+
+.content-container p {
+  margin-bottom: 20px; /* Add margin-bottom for spacing */
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.download-button {
+  padding: 10px 20px; /* Adjust the padding of the button */
+  background-color: #00900a;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  background-color: #e0e0e0;
+  color: #00900a;
+}
+
+.image-text-progress-section {
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center;
+  margin-bottom: 40px; /* Add margin-bottom for spacing */
+  background-color: #f2f2f2;
+}
+
+
+.item {
+  width: 100%;
+  margin: 10px;
+  padding: 20px 0px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.item img {
+  width: 100px;
+  height: auto;
+}
+
+.item h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.item p {
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #3498db;
+  border-radius: 5px;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class = "logo">
+   <!-- <img src="4df962b6e04c4ea2ba7ad99a140eb95d (1).png" alt="Company Logo" width="50" height="50">-->
+    <h1><a href = 'home.html' style="color:#000" >GrowSum</a></h1>
+    </div>
+    <div class="logo-search">
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#services">Insights</a></li>
+        <li><a href="#portfolio">Earn Money</a></li>
+        <li><a href="#Transactions">Transactions</a></li>
+        <li><a href="#download">Download App</a></li>
+        <li><a href="#gform">Google Form</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li>
+          <button class="register-button" onclick="window.location.href = 'registration.php'">Register</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="container">
+
+          <section class="image-text-section">
+            <div class="image-box0">
+              <img src="home_page.jpg" alt="Image">
+            </div>
+            <div class="text-box">
+              <h3>2023 Outlooks</h3>
+              <p>Shape your perspective on the year ahead with insights from economists and strategists across Gs Fund. Over the coming weeks, we’ll be pulling together outlooks that cover expectations for economic growth, unemployment, interest rates and more, giving you insight into the trends likely to shape global economies and markets in 2023.</p>
+            </div>
+          </section>
+      
+      <section id="home" class="section1">
+      <div class="image-boxes">
+        <div class="image-box">
+          <img src="image1.webp" alt="Image 1">
+          <p>
+            We serve a broad range of companies, organizations, and institutions through our financing, investing, execution and advisory capabilities.
+          </p>
+        </div>
+        <div class="image-box">
+          <img src="image2.jpg" alt="Image 2">
+          <p>
+            We provide insights, guidance, and services to help you achieve your financial and investing goals.
+          </p>
+        </div>
+        <div class="image-box">
+          <img src="image3.jpg" alt="Image 3">
+          <p>
+            Marcus by Goldman Sachs: A modern bank offering high-yield savings, managed portfolios, personal loans, and more
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="services" class="section2">
+      <div class="image-boxes">
+        <div class="image-box">
+          <img src="image4.jpg" alt="Image 4">
+          <p>
+            Jan Hatzius, head of Gs Fund Research and the firm’s chief economist, and Dominic Wilson, Senior Advisor in the Global Markets Research Group, explain why they believe the U.S. can avoid a recession and how the economic landscape is improving in Europe and China in 2023.
+          </p>
+        </div>
+        <div class="image-box">
+          <img src="image5.jpg" alt="Image 5">
+          <p>
+            The U.S. dollar may have soared against other major currencies in 2022, but there are growing signs that the greenback is past its peak, according to Kamakshya Trivedi, the head of currencies, interest rates and emerging markets strategy in Gs Fund Research.
+          </p>
+        </div>
+        <div class="image-box">
+          <img src="image6.jpg" alt="Image 6">
+          <p>
+            Jeff Currie, global head of commodities research, explains why commodity markets will be shaped by underinvestment in 2023.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <h2 style = "font-size: 50px" >Our Funds</h2>
+
+    <section id = "portfolio" class="image-text-progress-section">
+      
+      <div class="item">
+        <img src="image15.jpg" alt="Image 1">
+        <h3>Experience Fund</h3>
+        <p>It is a financial custody product issued by Goldman Sachs Fund after entering India.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%; color:#00900a"></div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="image16.jpg" alt="Image 2">
+        <h3>Green Leaf Fund-L79</h3>
+        <p>Green Leaf Fund-L79 is an environmentally friendly short-term fixed-income fund product launched by Goldman Sachs Fund. If you buy Green Leaf Fund-L79 from Goldman Sachs at Rs 2000 and earn Rs 72 interest per day, the total return after 30 days is Rs 2,160.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 50%;"></div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="image17.jpg" alt="Image 3">
+        <h3>Communication Technology Fund</h3>
+        <p>With the rapid development of science and technology, communication has become an indispensable part of people's life, and communication has brought a lot of convenience to our life. Communication Technology Fund is a short-term fixed-income fund product jointly launched by Goldman Sachs Fund and its Ministry of Electronics and Information Technology,
+          Communication Technology Fund pursues long-term and stable appreciation of fund assets on the basis of high returns. If you buy Communication Technology Fund from Goldman Sachs Fund at Rs 7,000, you will earn a fixed interest income of Rs 245 per day for a total gain of Rs 17,150 after 70 days.
+          
+          </p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 90%;"></div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="image18.jpg" alt="Image 4">
+        <h3>Education Fund-E33</h3>
+        <p>India is an ancient civilization, which attaches great importance to spiritual life and belief education, and attaches great importance to the role of moral education in personality development. Education Fund-E33 is a medium and long-term fixed-income fund product jointly launched by Goldman Sachs Fund and its education department
+          Education Fund-E33 pursues long-term and stable appreciation of fund assets on the basis of high returns. If you buy Education Fund-E33 from Goldman Sachs Fund at Rs 30,000, you will get fixed interest income of 900rs per day and the total return after 120 days will be Rs 108,000.</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: 60%;"></div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section id="Transactions" class="section-transaction">
+      <h2>Transactions</h2>
+      <div class="image-boxes">
+        <div class="image-box">
+          <img src="image10.jpg" alt="Image 10">
+        </div>
+        <div class="image-box">
+          <img src="image11.jpg" alt="Image 11">
+        </div>
+        <div class="image-box">
+          <img src="image12.jpg" alt="Image 12">
+        </div>
+      </div>
+    </section>
+    
+    <section id = "download" class="download-section">
+      <div class="image-container">
+        <img src="app_image.jpg" alt="Image">
+      </div>
+      <div class="content-container">
+        <h3>Download our App!</h3>
+        <p>You can follow the link below to register and download our GS fund app in your mobile.</p>
+        <button class="download-button" onclick="window.location.href = 'https://gsrg.xyz/241cMNm24n'">Download</button>
+      </div>
+    </section>
+
+    <section id ="gform" class="section-gform">
+      <div class="google-form">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeUhwVf8G0uPnZMhUw5N2njNlTbtLMU0fALDYJgzYAYdK4lcA/viewform?embedded=true" width="640" height="1156" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+      </section>
+
+  </div>    
+  
+  
+  
+  <footer>
+    <p>&copy; 2023 Goldman Sachs. All rights reserved.</p>
+  </footer>
+</body>
+</html>
