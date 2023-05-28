@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
   <title>Finance Company</title>
   <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
+      
+      html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
     body {
-      font-family: Arial, Helvetica, sans-serif
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #f9f9f9;
     }
     
     a{
@@ -64,7 +71,7 @@
     }
 
     .container {
-      margin-left: 0px auto;
+      margin: auto;
       max-width: 1920px;    
     }
     
@@ -94,9 +101,10 @@
   align-items: center;
   justify-content: center;
   height: 500px;
-  font-size: 30px;
+  font-size: 20px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: #6397d9;
-  color: whitesmoke;
+  color: rgb(255, 255, 255);
 }
  
 .image-text-section h3{
@@ -134,6 +142,7 @@
     .section {
       margin-bottom: 20px;
       align-items: center;
+      height: 500px;
       justify-content: center;
       background-color: #000139;
     }
@@ -157,22 +166,17 @@
       display: flex;
       flex-direction: column;
       padding: 40px;
-      height: 500px;
-      background-color: #9f9f9f;
-      color: grey;
+      height: fit-content;
       align-items: center;
       justify-content: center;
     }
 
-    .section2.image-boxes.image-box p{
-      color: grey;
-    }
 
     .section-transaction {
       margin-bottom: 20px;
       align-items: center;
       justify-content: center;
-      background-color: #7ea4d6;
+      background-color: #f9f9f9;
       color:whitesmoke
     }
 
@@ -254,41 +258,7 @@
       color:#d9d4d4;
     }
 
-    .logo-search {
-  display: flex;
-  align-items: center;
-} 
-
-.search-bar {
-  margin-left: 0px;
-}
-
-.search-bar input[type="text"] {
-  width: 200px;
-  padding: 8px;
-  border: none;
-  border-radius: 20px;
-  background-color: #cec9c9;
-  outline: none;
-}
-
-.search-bar button[type="submit"] {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  border: none;
-  background-color: transparent;
-  outline: none;
-  cursor: pointer;
-  color: #cec9c9;
-}
-
-.search-bar button[type="submit"]:hover {
-  color: #f39c12;
-}
-
-      
+     
 .download-section {
   display: flex;
   align-items: center;
@@ -347,16 +317,22 @@
   flex-direction: column; /* Arrange items vertically */
   align-items: center;
   margin-bottom: 40px; /* Add margin-bottom for spacing */
-  background-color: #f2f2f2;
+  background-color: #feffcf;
+;
 }
 
 
 .item {
-  width: 100%;
+  width: 50%;
   margin: 10px;
   padding: 20px 0px;
-  background-color: #f2f2f2;
+  border-radius: 20px;
+  background-color: #7c7c7c;
   text-align: center;
+}
+
+.item:hover{
+  transform: translateY(-5px);
 }
 
 .item img {
@@ -367,10 +343,13 @@
 .item h3 {
   margin-top: 10px;
   margin-bottom: 5px;
+  color: #ffd500;
 }
 
 .item p {
   margin-bottom: 10px;
+  font-size: 20px;
+  color: greenyellow;
 }
 
 .progress-bar {
@@ -382,25 +361,68 @@
 
 .progress {
   height: 100%;
-  background-color: #3498db;
+  background-color: #ffd500;
   border-radius: 5px;
 }
 
 
+.social-section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
-  </style>
+.social-section i{
+  font-size: 25px;
+  padding: 10px;
+  color:rgb(255, 45, 195);
+}
+
+.social-section:hover{
+  font-size: 25px;
+  padding: 10px;
+  color:white;
+  background-color:rgb(255, 45, 195);
+}
+
+.social-section:hover i{
+  font-size: 25px;
+  padding: 10px;
+  color:white;
+}
+
+</style>
+
+<script>
+  // JavaScript for smooth scrolling
+  document.addEventListener('DOMContentLoaded', function() {
+    var scrollLinks = document.querySelectorAll('a[href^="#"]');
+    
+    for (var i = 0; i < scrollLinks.length; i++) {
+      scrollLinks[i].addEventListener('click', smoothScroll);
+    }
+    
+    function smoothScroll(e) {
+      e.preventDefault();
+      var targetId = this.getAttribute('href');
+      var targetElement = document.querySelector(targetId);
+      
+      window.scrollTo({
+        behavior: 'smooth',
+        top: targetElement.offsetTop - 50 // Adjust the scroll offset if needed
+      });
+    }
+  });
+</script>
+
+
 </head>
 <body>
   <header>
     <div class = "logo">
    <!-- <img src="4df962b6e04c4ea2ba7ad99a140eb95d (1).png" alt="Company Logo" width="50" height="50">-->
     <h1><a href = 'home.html' style="color:#000" >GrowSum</a></h1>
-    </div>
-    <div class="logo-search">
-      <div class="search-bar">
-        <input type="text" placeholder="Search...">
-        <button type="submit"><i class="fas fa-search"></i></button>
-      </div>
     </div>
     <nav>
       <ul>
@@ -409,9 +431,8 @@
         <li><a href="#Transactions">Transactions</a></li>
         <li><a href="#download">Download App</a></li>
         <li><a href="#gform">Google Form</a></li>
-        <li><a href="login.php">Login</a></li>
         <li>
-          <button class="register-button" onclick="window.location.href = 'registration.php'">Register</button>
+          <button class="register-button" onclick="window.location.href = 'https://gsrg.xyz/241cMNm24n'">Register</button>
         </li>
       </ul>
     </nav>
@@ -425,7 +446,7 @@
             </div>
             <div class="text-box">
               <h3>2023 Outlooks</h3>
-              <p>Shape your perspective on the year ahead with insights from economists and strategists across Gs Fund. Over the coming weeks, we’ll be pulling together outlooks that cover expectations for economic growth, unemployment, interest rates and more, giving you insight into the trends likely to shape global economies and markets in 2023.</p>
+              <p>Shape your perspective on the year ahead with insights from economists and strategists across Gs Fund. Over the coming weeks, we will be pulling together outlooks that cover expectations for economic growth, unemployment, interest rates and more, giving you insight into the trends likely to shape global economies and markets in 2023.</p>
             </div>
           </section>
       
@@ -456,33 +477,31 @@
       <div class="image-boxes">
         <div class="image-box">
           <img src="image4.jpg" alt="Image 4">
-          <p>
+          <p style="color:grey; padding: 10px; background-color: white;">
             Jan Hatzius, head of Gs Fund Research and the firm’s chief economist, and Dominic Wilson, Senior Advisor in the Global Markets Research Group, explain why they believe the U.S. can avoid a recession and how the economic landscape is improving in Europe and China in 2023.
           </p>
         </div>
         <div class="image-box">
           <img src="image5.jpg" alt="Image 5">
-          <p>
+          <p style="color:grey; padding: 10px; background-color: white;">
             The U.S. dollar may have soared against other major currencies in 2022, but there are growing signs that the greenback is past its peak, according to Kamakshya Trivedi, the head of currencies, interest rates and emerging markets strategy in Gs Fund Research.
           </p>
         </div>
         <div class="image-box">
           <img src="image6.jpg" alt="Image 6">
-          <p>
+          <p style="color:grey; padding: 10px; background-color: white;">
             Jeff Currie, global head of commodities research, explains why commodity markets will be shaped by underinvestment in 2023.
           </p>
         </div>
       </div>
     </section>
     
-    <h2 style = "font-size: 50px" >Our Funds</h2>
-
     <section id = "portfolio" class="image-text-progress-section">
       
       <div class="item">
         <img src="image15.jpg" alt="Image 1">
         <h3>Experience Fund</h3>
-        <p>It is a financial custody product issued by Goldman Sachs Fund after entering India.</p>
+        <p>Price: INR 300 | Return: INR 390</p>
         <div class="progress-bar">
           <div class="progress" style="width: 75%; color:#00900a"></div>
         </div>
@@ -490,7 +509,7 @@
       <div class="item">
         <img src="image16.jpg" alt="Image 2">
         <h3>Green Leaf Fund-L79</h3>
-        <p>Green Leaf Fund-L79 is an environmentally friendly short-term fixed-income fund product launched by Goldman Sachs Fund. If you buy Green Leaf Fund-L79 from Goldman Sachs at Rs 2000 and earn Rs 72 interest per day, the total return after 30 days is Rs 2,160.</p>
+        <p>Price: INR 2000 | Return: INR 4160</p>
         <div class="progress-bar">
           <div class="progress" style="width: 50%;"></div>
         </div>
@@ -498,10 +517,7 @@
       <div class="item">
         <img src="image17.jpg" alt="Image 3">
         <h3>Communication Technology Fund</h3>
-        <p>With the rapid development of science and technology, communication has become an indispensable part of people's life, and communication has brought a lot of convenience to our life. Communication Technology Fund is a short-term fixed-income fund product jointly launched by Goldman Sachs Fund and its Ministry of Electronics and Information Technology,
-          Communication Technology Fund pursues long-term and stable appreciation of fund assets on the basis of high returns. If you buy Communication Technology Fund from Goldman Sachs Fund at Rs 7,000, you will earn a fixed interest income of Rs 245 per day for a total gain of Rs 17,150 after 70 days.
-          
-          </p>
+        <p>Price: INR 7000 | Return: INR 24150</p>
         <div class="progress-bar">
           <div class="progress" style="width: 90%;"></div>
         </div>
@@ -509,8 +525,7 @@
       <div class="item">
         <img src="image18.jpg" alt="Image 4">
         <h3>Education Fund-E33</h3>
-        <p>India is an ancient civilization, which attaches great importance to spiritual life and belief education, and attaches great importance to the role of moral education in personality development. Education Fund-E33 is a medium and long-term fixed-income fund product jointly launched by Goldman Sachs Fund and its education department
-          Education Fund-E33 pursues long-term and stable appreciation of fund assets on the basis of high returns. If you buy Education Fund-E33 from Goldman Sachs Fund at Rs 30,000, you will get fixed interest income of 900rs per day and the total return after 120 days will be Rs 108,000.</p>
+        <p>Price: INR 30000 | Return: INR 138000</p>
         <div class="progress-bar">
           <div class="progress" style="width: 60%;"></div>
         </div>
@@ -519,7 +534,6 @@
     
     
     <section id="Transactions" class="section-transaction">
-      <h2>Transactions</h2>
       <div class="image-boxes">
         <div class="image-box">
           <img src="image10.jpg" alt="Image 10">
@@ -539,7 +553,9 @@
       </div>
       <div class="content-container">
         <h3>Download our App!</h3>
-        <p>You can follow the link below to register and download our GS fund app in your mobile.</p>
+        <p>You can follow the link below to register and download our GS fund app in your mobile.
+           Download with the link below to get<h1 style = "color: #00900a;">INR 40</h1> sign up bonus!
+        </p>
         <button class="download-button" onclick="window.location.href = 'https://gsrg.xyz/241cMNm24n'">Download</button>
       </div>
     </section>
@@ -550,12 +566,24 @@
       </div>
       </section>
 
+      <div class="social-section">
+        <a href="https://www.instagram.com/your_instagram_handle" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/your_facebook_handle" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com/your_twitter_handle" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+
   </div>    
   
   
   
   <footer>
-    <p>&copy; 2023 Goldman Sachs. All rights reserved.</p>
+    <p>&copy; 2023 Goldmann Sachs. All rights reserved.</p>
   </footer>
 </body>
 </html>
